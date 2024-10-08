@@ -3,7 +3,7 @@ name: Update README Alternating Time
 on:
   schedule:
     - cron: '0 0 * * *'  # Se ejecutará todos los días a la medianoche (UTC)
-  workflow_dispatch:  # Permite ejecutarlo manualmente también
+  workflow_dispatch:  # También permite ejecutarlo manualmente
 
 jobs:
   update-readme:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Actualizar a v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3  # Actualizar a v3
         with:
           python-version: '3.x'
 
